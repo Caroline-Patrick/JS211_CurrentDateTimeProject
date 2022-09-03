@@ -102,7 +102,9 @@ const dataTypes=(v) => {
 }
  dataTypes([1,2,3])
 
-// const dataTypeFinder = (inputVar) => {
+// Write a JavaScript program that adds 2 numbers together.
+ 
+//const dataTypeFinder = (inputVar) => {
 //   console.log('typeof variable: ', typeof inputVar )
 // }
 
@@ -123,7 +125,6 @@ const dataTypes=(v) => {
 //   dataOutputElement.appendChild(dataItem);
 // }
 
-// Write a JavaScript program that adds 2 numbers together.
 
 // let firstNum = null
 // let secondNum = null
@@ -136,6 +137,7 @@ const dataTypes=(v) => {
 //   // "parseInt" is a built in function in JS that converts a string/word into a number
 //   secondNum = parseInt(num)
 // }
+// Write a JavaScript program that adds 2 numbers together.
 
 const addTwo = (numA, numB) => {
   const sum = numA + numB
@@ -143,6 +145,8 @@ const addTwo = (numA, numB) => {
 }
 
 addTwo(4,5)
+
+// Write a JavaScript program that runs only when 2 things are true.
 
 // const changeOperation = (chosenOperation) => {
 //   operation = chosenOperation
