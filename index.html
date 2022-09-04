@@ -7,24 +7,71 @@
   <body>
     <h1>Hello World!</h1>
     <hr/>
-    <div id="display-element"></div>
+    <div id="display-dateElement"></div>
     <button onclick="displayDate()">Click Me</button>
     <hr/>
+    <h4>Convert a number to a string</h4>
+    <div id="display-string"></div>
+    <input type="number" onkeyup="numToString(this.value)">
+<br>
+    <h4>Convert a string to a number</h4>
+    <div id="display-number"></div>
+    <input type="text" onkeyup="stringToNumber(this.value)">
+    <br>
+    <h4>Display data type</h4>
 
-    <div> 
+    <div id="display-typeof"></div>
+    <input type="text" onkeyup="dataTypes(this.value)">
+    
+    <br>
+    <h4>Sum of two numbers</h4>
+
+    <div id="display-sum"></div>
+    <input type="number" id="firstNumber" onkeyup="saveFirstNumber(this.value)">
+    <input type="number" id="secondNumber" onkeyup="saveSecondNumber(this.value)">
+
+    
+   
+    <button type="button" onclick="equals()">Equals</button>
+<br>
+<br>
+<h4>Arguments</h4>
+
+    <div id="display-string"></div>
+    <input type="text" onkeyup="numToString(this.value)">
+    <input type="text" onkeyup="numToString(this.value)">
+    <button type="button" onclick="truthSeeker()">Find the Truth</button>
+
+<br>
+   
+    <!-- <form class="calculator">
+      <h3>Add Two Numbers</h3>
+      <label for="first-number">First Number:</label>
+      <input type="number" id="first-Number" name="first-Number" placeholder="type the first number" value="" onkeyup="saveFirstNumber(this.value)">
+      <label for="second-number">Second Number:</label>
+      <input type="number" id="second-Number" name="second-Number" placeholder="type the second number" onkeyup="saveSecondNumber(this.value)">
+      <div>
+        <button type="button" name="add" id="addition" onclick="changeOperation(this.id)">Add</button>
+      </div>
+      <br>
+      <button type="button" onclick="equals()">Equals</button>
+      <button type="reset">Clear</button>
+    </form> -->
+
+    <!-- <div> 
       <label for="number">Number to String Input</label> 
       <input type="number" name="number" id="userInputNumber" onkeyup="saveValue(this)"> 
     </div>
     <div>
       <input type="button" value="Submit" onclick="numberToStringSubmit()">
-    </div>
-  <section>
+    </div> -->
+  <!-- <section>
     <h3>User Submitted Numbers Here:</h3>
     <ul id="numberInputHere"></ul>
   </section>
 <br>
-<hr>
-  <div> 
+<hr> -->
+  <!-- <div> 
       <label for="string">String to Number Input</label> 
       <input type="text" name="number" id="" onkeyup="saveValueForString(this)"> 
     </div>
@@ -53,20 +100,17 @@
   <form class="calculator">
     <h3>Add Two Numbers</h3>
     <label for="first-number">First Number:</label>
-    <!-- the "onkeyup" event listener passes its input's "value" to the "saveFirstNumber" function in the main.js file -->
     <input type="number" id="first-Number" name="first-Number" placeholder="type the first number" value="" onkeyup="saveFirstNumber(this.value)">
     <label for="second-number">Second Number:</label>
     <input type="number" id="second-Number" name="second-Number" placeholder="type the second number" onkeyup="saveSecondNumber(this.value)">
     <div>
-      <!-- the "onclick" event listener passes its element's "id" to the "changeOperation" function in the main.js file -->
       <button type="button" name="add" id="addition" onclick="changeOperation(this.id)">Add</button>
     </div>
     <br>
-    <!-- this "onclick" calls the "equal" function in the main.js file -->
     <button type="button" onclick="equals()">Equals</button>
     <button type="reset">Clear</button>
   </form>
-  <div id="result"></div>
+  <div id="result"></div> -->
 
   </body>
   <script src="main.js"></script>

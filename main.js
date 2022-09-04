@@ -10,7 +10,7 @@ console.log(new Date)
 const displayDate = () => {
   const currentDate = new Date()
 
-  document.getElementById("display-element").innerHTML = currentDate;
+  document.getElementById("display-dateElement").innerHTML = currentDate;
 }
  
 
@@ -36,9 +36,10 @@ const numToString = (n) => {
   console.log(`line 36 stringToNumber:  ${typeof(n)}`)
   const num = n.toString()
   console.log( `line 38 stringToNumber:  ${typeof(num)}`)
+
+  document.getElementById("display-string").innerHTML = num;
 }
 
-numToString(2);
 
 // Write a JavaScript program to convert a string to the number.
 // let numberString = ""
@@ -61,10 +62,9 @@ const stringToNumber =(s)=>{
   const num = parseInt(s);
   console.log(num)
   console.log(`line 63 stringToNumber: ${typeof(num)}`);
- 
+  document.getElementById("display-number").innerHTML = num;
 }
 
-stringToNumber('emily')
 
 // Write a JavaScript program that takes in different datatypes and prints out whether they are a:
   // * Boolean
@@ -99,8 +99,8 @@ const dataTypes=(v) => {
       console.log(`I don't know what ${v} is.`)
       break;
   }
+  document.getElementById("display-typeof").innerHTML = typeof(v);
 }
- dataTypes([1,2,3])
 
 // Write a JavaScript program that adds 2 numbers together.
  
@@ -125,62 +125,83 @@ const dataTypes=(v) => {
 //   dataOutputElement.appendChild(dataItem);
 // }
 
-
-// let firstNum = null
-// let secondNum = null
-// let operation = null
-// const saveFirstNumber = (num) => {
-//   firstNum = parseInt(num)  
-
-// }
-// const saveSecondNumber = (num) => {
-//   // "parseInt" is a built in function in JS that converts a string/word into a number
-//   secondNum = parseInt(num)
-// }
 // Write a JavaScript program that adds 2 numbers together.
 
-const addTwo = (numA, numB) => {
-  const sum = numA + numB
-  console.log(sum)
+let firstNum = null
+let secondNum = null
+let operation = null
+
+const saveFirstNumber = (num1) => {
+  firstNum = parseInt(num1)  
+  console.log(firstNum)
+
+}
+const saveSecondNumber = (num2) => {
+  // "parseInt" is a built in function in JS that converts a string/word into a number
+  secondNum = parseInt(num2)
+  console.log(secondNum)
 }
 
-addTwo(4,5)
+const addTwo = (firstNum, secondNum) => {
+ 
+  const sum = firstNum + secondNum
+  console.log(sum)
 
-// Write a JavaScript program that runs only when 2 things are true.
+  document.getElementById("display-sum").innerHTML = `Results: ${sum}`
+}
 
-// const changeOperation = (chosenOperation) => {
-//   operation = chosenOperation
-//   console.log(operation)
-// }
+const equals = () => {
+  const sum = addTwo(firstNum, secondNum)
 
-// const putResultInElement = (operationResults) => {
+}
 
-//   document.getElementById("result").innerHTML = "Results: " + operationResults
-// }
-// const equals = () => {
-//   switch (operation) {
-//     case "addition":  putResultInElement(add(firstNum, secondNum)) 
-//     break;
-//     case "subtraction": putResultInElement(subtract(firstNum, secondNum)) 
-//     break;
-//     default: "Choose an operation"
-//   }
-// }
+
 
 // Write a JavaScript program that runs only when 2 things are true.
 
 
-const truthSeeker =(arg1, arg2)=> {
+let argumentOne = null
+let argumentTwo= null
 
-if (arg1 && arg2 == true) {
+const saveArg1 = (a1) => {
+  argumentOne = a1  
+  console.log(argumentOne)
+
+}
+const saveArg2 = (a2) => {
+  argumentTwo = a2 
+  console.log(argumentTwo)
+
+}
+const truthSeeker =(argumentOne, argumentTwo)=> {
+  
+
+if (argumentOne && argumentTwo == true) {
   console.log("Both are TRUE")
-}}
+}
+else if (argumentOne || argumentTwo == true){
+  console.log("One of these is TRUE")
+}
+else if (argumentOne && argumentTwo !== true){
+  console.log("Both are False")
+}
+else {
+  console.log( "error")
+}
 
+// document.getElementById("display-truth").innerHTML = `This argument is ${truthSeeker(argumentOne, argumentTwo)}`
+}
 
+const truthSeeker1 =(arg1, arg2)=> {
+  
+  if (arg1 && arg2 == true) {
+    console.log("Both are TRUE")
+  }}
 
 // Write a JavaScript program that runs when 1 of 2 things are true.
 
-const atLeastOneTruth =(arg1, arg2)=> {
+
+  const atLeastOneTruth =(arg1, arg2)=> {
 
   if (arg1 || arg2 == true) {
     console.log("One of these is TRUE")
